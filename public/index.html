@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Family Registration</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="card">
+    <h1 class="brand">Family Registry</h1>
+
+    <form id="regForm">
+      <div class="row">
+        <label>Name<input type="text" name="name" required></label>
+        <label>Phone<input type="tel" name="phone" required pattern="[0-9+\-() ]{6,}" placeholder="e.g. +92 300 0000000"></label>
+      </div>
+
+      <label>Address<textarea name="address" rows="2"></textarea></label>
+
+      <label>Number of children
+        <select id="childCount" name="childCount">
+          <option value="0">None</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+        </select>
+      </label>
+
+      <div id="childrenContainer"></div>
+
+      <div class="row">
+        <button type="submit" class="btn">Submit</button>
+        <button type="reset" class="btn ghost">Reset</button>
+      </div>
+
+      <div id="feedback" aria-live="polite"></div>
+    </form>
+
+    <p class="muted">Want to view entries? <a href="/dashboard.html">Open dashboard</a></p>
+  </main>
+
+  <script src="/script.js"></script>
+</body>
+  </html>
